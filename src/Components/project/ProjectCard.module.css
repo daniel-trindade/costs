@@ -23,6 +23,11 @@
   font-weight: bold;
 }
 
+.project_card_actions span,
+.project_card button span{
+  padding-left: .5em;
+}
+
 .category_text{
   display: flex;
   align-items: center;
@@ -74,6 +79,7 @@
   align-items: center;
   justify-content: center;
   transition: .5s;
+  width: 300px;
 }
 
 .project_card_actions .svg{

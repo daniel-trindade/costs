@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "name": "Mechanica",
-      "budget": "100000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
       "name": "Condominium",
       "budget": "20000",
       "category": {
@@ -24,25 +13,47 @@
     },
     {
       "name": "Relógio Digital",
-      "budget": "22000",
+      "budget": "1000",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 1000,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "FamilySearch",
+      "budget": "20000",
       "category": {
         "id": "1",
         "name": "infra"
       },
       "cost": 0,
       "services": [],
-      "id": 4
+      "id": 5
     },
     {
-      "name": "Blog Family",
-      "budget": "10000",
+      "name": "Mechanica",
+      "budget": "200000",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "Site do Seminário",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
     }
   ],
   "categories": [

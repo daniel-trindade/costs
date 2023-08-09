@@ -21,6 +21,7 @@ function Projects(){
   }
 
   useEffect(() => {
+    //O SETTIMEOUT ESTÁ SENDO UTILIZADO PARA SIMULAR O CARREGAMENTO DOS DADOS
     setTimeout(
       () => {
         fetch('http://localhost:5000/projects', {
