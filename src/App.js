@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Company from './Components/Pages/Company';
-import Home from './Components/Pages/Home';
-import Contact from './Components/Pages/Contact';
-import NewProject from './Components/Pages/NewProject';
-import Projects from './Components/Pages/Projects';
 
-import Container from './Components/layout/Container';
+import Home from './Components/Pages/Home';
+import Project from './Components/Pages/Project';
+import Contact from './Components/Pages/Contact';
+import Company from './Components/Pages/Company';
+import Projects from './Components/Pages/Projects';
+import NewProject from './Components/Pages/NewProject';
+
+
 import Navbar from './Components/layout/Navbar';
 import Footer from './Components/layout/Footer';
+import Container from './Components/layout/Container';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path='/company' element={<Company/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/newproject' element={<NewProject/>}/>
+          <Route path='/project'>
+            <Route path=':id' element={<Project/>}/>
+          </Route>
         </Routes>
       </Container>
 
