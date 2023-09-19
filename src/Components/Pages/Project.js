@@ -14,8 +14,9 @@ import ServiceForm from '../services/ServiceForm'
 function Project(){
 
   const { id } = useParams()
-  const [project, setProject] = useState([])
   const [message, setMessage] = useState('')
+  const [project, setProject] = useState([])
+  const [services, setServices] = useState([])
   const [typeMessage, setTypeMessage] = useState('')
   const [showProjectForm, setShowProjectForm] = useState(false)
   const [showServiceForm, setShowServiceForm] = useState(false)
@@ -32,6 +33,7 @@ function Project(){
     .then((resp) => resp.json())
     .then((data) => {
       setProject(data)
+      setServices(data.services)
     })
     .catch ((err) => console.log(err))
     }, 300)
@@ -69,7 +71,7 @@ function Project(){
 
     //ZERAR MENSAGEM PARA CASO DUAS ALTERAÇÕES SEJAM FEITAS EM SEGUIDA
     setMessage('')
-    
+
     const lastService = project.services[project.services.length -1]
 
     lastService.id = uuidv4()
@@ -99,14 +101,9 @@ function Project(){
     })
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data)
+      setServices(data.services)
     })
     .catch((err) => console.log(err))
-  
-
-
-
-    
   }
 
   function toggleProjectForm(){
@@ -168,7 +165,9 @@ function Project(){
               </div>
               <h2>Serviços</h2>
               <Container customClass="start">
-                <p>Itens de Serviço</p>
+                {services.length > 0 && (<p>Serviços disponíveis em breve!!</p>)}
+                {services.length === 0 && (<p>Não há serviços cadastrados!</p>)}
+                
               </Container>
           </Container>
         </div>

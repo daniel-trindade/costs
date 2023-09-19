@@ -53,8 +53,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 2000,
+      "services": [
+        {
+          "name": "Banco de Dados",
+          "cost": "2000",
+          "description": "Compra de alocação",
+          "id": "6b3dc94c-a3d4-47b3-89b6-58876895c48f"
+        }
+      ],
       "id": 6
     },
     {
