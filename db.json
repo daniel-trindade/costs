@@ -4,16 +4,22 @@
       "name": "Condominium",
       "budget": "20000",
       "category": {
-        "id": "1",
-        "name": "infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 200,
+      "cost": 2500,
       "services": [
         {
-          "name": "Pintura",
-          "cost": "200",
-          "description": "Pintura de todo o COndominio",
-          "id": "3e635631-479e-453a-8508-4cb342faf9b8"
+          "name": "Dev Front-end",
+          "cost": "1000",
+          "description": "Contratação de dev Front-end",
+          "id": "c1e8923f-bc8d-46fc-af50-8061481e399a"
+        },
+        {
+          "description": "Contratação de dev Back-end",
+          "name": "Dev Back-end",
+          "cost": "1500",
+          "id": "15e39162-9b06-4c66-94dd-db6121ae9f8c"
         }
       ],
       "id": 3
@@ -26,7 +32,14 @@
         "name": "infra"
       },
       "cost": 1000,
-      "services": [],
+      "services": [
+        {
+          "description": "Contratação de Servidor externo",
+          "name": "Servidor",
+          "cost": "1000",
+          "id": "ee0a870c-20a1-4107-8bdd-f93f2552292e"
+        }
+      ],
       "id": 4
     },
     {
