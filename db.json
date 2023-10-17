@@ -7,19 +7,13 @@
         "id": "1",
         "name": "infra"
       },
-      "cost": 400,
+      "cost": 200,
       "services": [
         {
           "name": "Pintura",
           "cost": "200",
           "description": "Pintura de todo o COndominio",
           "id": "3e635631-479e-453a-8508-4cb342faf9b8"
-        },
-        {
-          "name": "Pintura 2",
-          "cost": "200",
-          "description": "Pintura de todo o COndominio",
-          "id": "553973a8-02a4-4bc6-9fc8-c3c2c13e811f"
         }
       ],
       "id": 3
@@ -74,6 +68,30 @@
       "cost": 0,
       "services": [],
       "id": 7
+    },
+    {
+      "name": "App de Banco",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 3200,
+      "services": [
+        {
+          "name": "Produção do Layout",
+          "cost": "1000",
+          "description": "Criação da interface do App",
+          "id": "d871b8b2-6296-4a86-8e6b-b4af7cdb0ff1"
+        },
+        {
+          "name": "Contratar DEV JavaScript",
+          "cost": "2200",
+          "description": "O DEV ficará responsável pela criação do App",
+          "id": "4882baf8-73f3-41a4-9423-9fd53d9ab527"
+        }
+      ],
+      "id": 8
     }
   ],
   "categories": [

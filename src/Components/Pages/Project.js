@@ -11,7 +11,6 @@ import ProjectForm from '../project/ProjectForm'
 import ServiceCard from '../services/ServiceCard'
 import ServiceForm from '../services/ServiceForm'
 
-
 function Project(){
 
   const { id } = useParams()
@@ -103,8 +102,36 @@ function Project(){
     .then((resp) => resp.json())
     .then((data) => {
       setServices(data.services)
+      setShowServiceForm(false)
     })
     .catch((err) => console.log(err))
+  }
+
+  function removeService(id, cost){
+
+    const servicesUpdate = project.services.filter(
+      (service) => service.id !== id,
+    )
+
+    const projectUpdated = project
+
+    projectUpdated.services = servicesUpdate
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+    
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(projectUpdated)
+    }).then((resp) => resp.json())
+    .then((data) => {
+      setProject(projectUpdated)
+      setServices(servicesUpdate)
+      setMessage('Serviço removido com Sucesso')
+      setTypeMessage('success')
+    })
+    .catch(err => console.log(err))
   }
 
   function toggleProjectForm(){
@@ -113,10 +140,6 @@ function Project(){
 
   function toggleServiceForm(){
     setShowServiceForm(!showServiceForm)
-  }
-
-  function removeService(){
-
   }
 
   return(
@@ -170,19 +193,21 @@ function Project(){
               </div>
               <h2>Serviços</h2>
               <Container customClass="start">
-                {services.length > 0 && 
-                  services.map((service) => (
-                    <ServiceCard
-                      id={service.id}
-                      name={service.name}
-                      cost={service.cost}
-                      description={service.description}
-                      key={service.key}
-                      handleRemove={removeService}
-                    />
-                  ))
+                {services.length > 0 &&
+                 services.map((service) => (
+                  <ServiceCard
+                    id={service.id}
+                    name={service.name}
+                    cost={service.cost}
+                    description={service.description}
+                    key={service.id}
+                    handleRemove={removeService}
+                  />
+                ))
                 }
-                {services.length === 0 && (<p>Não há serviços cadastrados!</p>)}
+                {
+                  services.length === 0 && (<p>Não há serviços cadastrados!</p>)
+                }
                 
               </Container>
           </Container>

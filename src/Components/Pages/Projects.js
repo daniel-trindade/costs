@@ -8,6 +8,7 @@ import Container from '../layout/Container'
 import LinkButton from '../layout/LinkButton'
 import ProjectCard from '../project/ProjectCard'
 
+
 function Projects(){
 
   const location = useLocation()
@@ -74,7 +75,7 @@ function Projects(){
               category={project.category.name}
               key={project.id}
               handleRemove={removeProject}
-            />
+            />          
           ))
         }
         {!removeLoading && <Loading/>}
