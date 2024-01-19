@@ -105,6 +105,17 @@
         }
       ],
       "id": 8
+    },
+    {
+      "name": "Animous Site",
+      "budget": "500000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
     }
   ],
   "categories": [

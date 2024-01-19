@@ -1,0 +1,22 @@
+.main{
+  width: 50%;
+  height: 10%;
+}
+
+.contact{
+  margin-left: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  font-size: 15pt;
+}
+
+.format{
+  color: #ffbb33;
+  font-weight: bolder;
+  
+}
+
+.talkToUs textarea{
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
